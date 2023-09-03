@@ -1,0 +1,60 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@font-face {
+  font-family: "star-wars";
+  src: url(../../public/fonts/star-wars.ttf);
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    background-image: url("../../public/images/background_starwars.jpeg");
+    background-repeat: space;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #e4e4e7;
+  outline: 1px solid #e4e4e7;
+  border-radius: 5px;
+}
+
+.star-wars {
+  font-family: "star-wars";
+}
+
+.lightsaber {
+  margin-top: -50px;
+  width: 800px;
+  
+}
+.slide {
+  width: 1200px;
+}
